@@ -1,0 +1,37 @@
+{
+  "name": "players-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "clean": "rm -rf dist .nexus",
+    "style": "prettier --write 'src/**/*'",
+    "build": "tsc -p  tsconfig.json",
+    "dev": "ts-node src/main",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0",
+    "apollo-server-express": "^2.14.3",
+    "express": "^4.17.1",
+    "graphql": "^15.1.0"
+  },
+  "devDependencies": {
+    "@prisma/cli": "2.0.0",
+    "@types/faker": "^4.1.12",
+    "@types/jest": "25.2.3",
+    "faker": "^4.1.0",
+    "jest": "26.0.1",
+    "prettier": "2.0.5",
+    "ts-jest": "26.1.0",
+    "typescript": "^3.9.5"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
